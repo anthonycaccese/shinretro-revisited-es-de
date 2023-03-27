@@ -17,6 +17,33 @@ license:       creative commons CC-BY-NC-SA
       <fontMedium>./_inc/fonts/Montserrat-Medium.ttf</fontMedium>
    </variables>
 
+   <colorScheme name="shinretro-dark">
+      <variables>
+         <backgroundColor>25283B</backgroundColor>
+         <backgroundHighlightColor>2C345F</backgroundHighlightColor>
+         <helpIconColor>ffffff77</helpIconColor>
+         <helpTextColor>ffffff77</helpTextColor>
+         <systemLogoColor>ffffff</systemLogoColor>
+         <systemCarouselColor>2C345F</systemCarouselColor>
+         <systemGameCountColor>757BA0</systemGameCountColor>
+         <systemMetadataColor>ffffffbb</systemMetadataColor>
+         <gamelistGridColor>2C345F</gamelistGridColor>
+      </variables>
+   </colorScheme>
+   <colorScheme name="dark">
+      <variables>
+         <backgroundColor>111111</backgroundColor>
+         <backgroundHighlightColor>1a1a1a</backgroundHighlightColor>
+         <helpIconColor>ffffff77</helpIconColor>
+         <helpTextColor>ffffff77</helpTextColor>
+         <systemLogoColor>ffffff</systemLogoColor>
+         <systemCarouselColor>111111</systemCarouselColor>
+         <systemGameCountColor>ecb83b</systemGameCountColor>
+         <systemMetadataColor>ffffffbb</systemMetadataColor>
+         <gamelistGridColor>1a1a1a</gamelistGridColor>
+      </variables>
+   </colorScheme>
+
    <view name="system,gamelist">
       <image name="background">
          <origin>0 0</origin>
@@ -24,9 +51,16 @@ license:       creative commons CC-BY-NC-SA
          <size>1 1</size>
          <path>${spacerImage}</path>
          <tile>true</tile>
-         <color>25283B</color>
+         <color>${backgroundColor}</color>
          <zIndex>0</zIndex>
       </image>
+      <helpsystem name="help">
+         <fontPath>${fontMedium}</fontPath>
+         <fontSize>0.020</fontSize><!-- 22 -->
+         <letterCase>capitalize</letterCase>
+         <iconColor>${helpIconColor}</iconColor>
+         <textColor>${helpTextColor}</textColor>
+      </helpsystem>
    </view>
 
    <view name="system">
@@ -35,7 +69,7 @@ license:       creative commons CC-BY-NC-SA
          <pos>0.098958333333333 0</pos><!-- 190 0 -->
          <size>0.401041666666667 1</size><!-- 770 1080 -->
          <path>./_inc/images/background-diagonal.svg</path>
-         <color>2C345F</color>
+         <color>${backgroundHighlightColor}</color>
          <zIndex>1</zIndex>
       </image>
       <carousel name="system-carousel">
@@ -47,7 +81,7 @@ license:       creative commons CC-BY-NC-SA
          <unfocusedItemOpacity>1</unfocusedItemOpacity>
          <unfocusedItemSaturation>0</unfocusedItemSaturation>
          <unfocusedItemDimming>1</unfocusedItemDimming>
-         <imageColor>25283B</imageColor>
+         <imageColor>${systemCarouselColor}</imageColor>
          <imageSelectedColor>ffffff</imageSelectedColor>
          <itemScale>1.2</itemScale>
          <itemSize>0.213541666666667 0.583333333333333</itemSize><!-- 410 630 -->
@@ -57,14 +91,13 @@ license:       creative commons CC-BY-NC-SA
          <fastScrolling>true</fastScrolling>
          <color>00000000</color>
          <zIndex>2</zIndex>
-         <textColor>ffffff00</textColor>
-         <textBackgroundColor>000000</textBackgroundColor>
       </carousel>
       <image name="system-logo">
          <origin>0.5 0.5</origin>
          <pos>0.677083333333333 0.45</pos><!-- 1300 -->
          <maxSize>0.208333333333333 0.12037037037037</maxSize><!-- 400 130 -->
          <path>./_inc/systems/logos/${system.theme}.svg</path>
+         <color>${systemLogoColor}</color>
       </image>
       <text name="system-game-count">
          <origin>0.5 0.5</origin>
@@ -73,7 +106,7 @@ license:       creative commons CC-BY-NC-SA
          <fontSize>0.03</fontSize>
          <fontPath>${fontMediumSansSerif}</fontPath>
          <systemdata>gamecount</systemdata>
-         <color>757BA0</color>
+         <color>${systemGameCountColor}</color>
       </text>
       <text name="system-metadata">
          <origin>0.5 0.5</origin>
@@ -83,16 +116,11 @@ license:       creative commons CC-BY-NC-SA
          <fontPath>${fontMedium}</fontPath>
          <text>${systemManufacturer}  ${systemReleaseYear}</text>
          <letterCase>uppercase</letterCase>
-         <color>ffffffbb</color>
+         <color>${systemMetadataColor}</color>
       </text>
       <helpsystem name="help">
          <origin>0.5 1</origin>
          <pos>0.677083333333333 .91</pos>
-         <fontPath>${fontMedium}</fontPath>
-         <fontSize>0.024</fontSize><!-- 22 -->
-         <letterCase>capitalize</letterCase>
-         <iconColor>ffffff77</iconColor>
-         <textColor>ffffff77</textColor>
       </helpsystem>
    </view>
 
@@ -102,7 +130,7 @@ license:       creative commons CC-BY-NC-SA
          <pos>0.625 0</pos><!-- 1200 0 -->
          <size>0.401041666666667 1</size><!-- 770 1080 -->
          <path>./_inc/images/background-diagonal.svg</path>
-         <color>2C345F</color>
+         <color>${backgroundHighlightColor}</color>
          <zIndex>1</zIndex>
       </image>
       <image name="game-metadata-background">
@@ -111,7 +139,7 @@ license:       creative commons CC-BY-NC-SA
          <size>0.104166666666667 1</size><!-- 200 1080 -->
          <path>${spacerImage}</path>
          <tile>true</tile>
-         <color>2C345F</color>
+         <color>${backgroundHighlightColor}</color>
          <zIndex>1</zIndex>
       </image>
       <image name="system-logo">
@@ -129,7 +157,7 @@ license:       creative commons CC-BY-NC-SA
          <itemSize>0.135416666666667 0.212962962962963</itemSize><!-- 260 230 -->
          <itemSpacing>0.005208333333333 -1</itemSpacing><!-- 10 -->
          <imageRelativeScale>0.8</imageRelativeScale>
-         <backgroundColor>2C345F</backgroundColor>
+         <backgroundColor>${gamelistGridColor}</backgroundColor>
          <textRelativeScale>0.8</textRelativeScale>
          <textColor>ffffff</textColor>
          <fontPath>${fontMedium}</fontPath>
@@ -210,11 +238,6 @@ license:       creative commons CC-BY-NC-SA
       <helpsystem name="help">
          <origin>0 1</origin>
          <pos>0.046875 0.925</pos><!-- 90 90 -->
-         <fontPath>${fontMedium}</fontPath>
-         <fontSize>0.020</fontSize><!-- 22 -->
-         <letterCase>capitalize</letterCase>
-         <iconColor>ffffff77</iconColor>
-         <textColor>ffffff77</textColor>
       </helpsystem>
    </view>
 

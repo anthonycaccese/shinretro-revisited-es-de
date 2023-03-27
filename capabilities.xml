@@ -1,11 +1,18 @@
 <themeCapabilities>
    
-   <themeName>Shinretro (Revisited)</themeName>
+   <themeName>shinretro (Revisited)</themeName>
+   
+    <colorScheme name="shinretro-dark">
+        <label>shinretro Dark</label>
+    </colorScheme>
+    <colorScheme name="dark">
+        <label>Dark</label>
+    </colorScheme>
 
    <transitions name="transitions">
       <label>transitions</label>
       <selectable>false</selectable>
-      <systemToSystem>slide</systemToSystem>
+      <systemToSystem>instant</systemToSystem>
       <systemToGamelist>slide</systemToGamelist>
       <gamelistToGamelist>slide</gamelistToGamelist>
       <gamelistToSystem>slide</gamelistToSystem>
