@@ -1,0 +1,12 @@
+<theme>
+   <include>./../theme.xml</include>
+   <view name="gamelist">
+      <text name="custom-collection-name">
+         <origin>0 0.5</origin>
+         <pos>0.2 0.083333333333333</pos>
+         <metadata>systemFullname</metadata>
+         <fontSize>0.025925925925926</fontSize><!-- 28 -->
+         <color>ffffff</color>
+      </text>
+   </view>
+</theme>
